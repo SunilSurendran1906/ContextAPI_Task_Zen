@@ -8,7 +8,7 @@ const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/mocks/Products.json")
+    fetch("/mocks/Products.json")
       .then((response) => response.json())
       .then((result) => setProducts(result.products))
       .catch((e) => console.log(e));
